@@ -77,16 +77,16 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/
 
 # Wireless
 # XXX?
-BOARD_WLAN_DEVICE               := bcm4329
-WIFI_DRIVER_FW_STA_PATH         := "/system/etc/wifi/fw_bcm4329.bin"
-WIFI_DRIVER_FW_AP_PATH          := "/system/etc/wifi/fw_bcm4329_ap.bin"
-WIFI_DRIVER_MODULE_NAME         := "wireless"
-WIFI_DRIVER_MODULE_PATH         := "/system/lib/modules/wireless.ko"
-WIFI_DRIVER_MODULE_ARG          := "firmware_path=/system/etc/wifi/fw_bcm4329.bin nvram_path=/system/etc/wifi/nvram.txt config_path=/data/misc/wifi/config"
-WPA_SUPPLICANT_VERSION          := VER_0_6_X
-WIFI_DRIVER_HAS_LGE_SOFTAP      := true
-BOARD_WEXT_NO_COMBO_SCAN        := true
-BOARD_WPA_SUPPLICANT_DRIVER     := WEXT
+BOARD_WLAN_DEVICE		:= bcm4329
+WIFI_DRIVER_FW_STA_PATH		:= "/system/etc/wifi/fw_bcm4329.bin"
+WIFI_DRIVER_FW_AP_PATH		:= "/system/etc/wifi/fw_bcm4329_ap.bin"
+WIFI_DRIVER_MODULE_NAME		:= "wireless"
+WIFI_DRIVER_MODULE_PATH		:= "/system/lib/modules/wireless.ko"
+WIFI_DRIVER_MODULE_ARG		:= "firmware_path=/system/etc/wifi/fw_bcm4329.bin nvram_path=/system/etc/wifi/nvram.txt config_path=/data/misc/wifi/config"
+WPA_SUPPLICANT_VERSION		:= VER_0_6_X
+WIFI_DRIVER_HAS_LGE_SOFTAP	:= true
+BOARD_WEXT_NO_COMBO_SCAN	:= true
+BOARD_WPA_SUPPLICANT_DRIVER	:= WEXT
 
 # XXX: fix these
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -100,22 +100,22 @@ TARGET_PREBUILT_KERNEL := device/lge/sniper/kernels/hicstdm/kernel
 TARGET_PREBUILT_MODULES := $(wildcard device/lge/sniper/kernels/hicstdm/*.ko)
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_PAGESIZE := 2048  
+BOARD_KERNEL_PAGESIZE := 2048
 
 # Kernel
 ifneq ($(TARGET_PREBUILT_KERNEL),)
 PRODUCT_COPY_FILES += \
-    $(TARGET_PREBUILT_KERNEL):kernel
+	$(TARGET_PREBUILT_KERNEL):kernel
 endif
 ifneq ($(TARGET_PREBUILT_MODULES),)
 PRODUCT_COPY_FILES += \
-    $(foreach mod,$(TARGET_PREBUILT_MODULES),$(mod):system/lib/modules/$(notdir $(mod)))
+	$(foreach mod,$(TARGET_PREBUILT_MODULES),$(mod):system/lib/modules/$(notdir $(mod)))
 endif
-
 
 
 # Command line for charging mode 
 BOARD_GLOBAL_CFLAGS += -DCHARGERMODE_CMDLINE_NAME='"rs"' -DCHARGERMODE_CMDLINE_VALUE='"c"'
 
-# PlayfulGod's recovery identifies as "marquee"
-TARGET_OTA_ASSERT_DEVICE := sniper,marquee
+# On LS855/LG855/VM855 PlayfulGod's recovery identifies as "marquee"
+# On AS855 PlayfulGod's recovery identifies as "ignite"
+TARGET_OTA_ASSERT_DEVICE := sniper,marquee,ignite
