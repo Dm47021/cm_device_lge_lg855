@@ -792,10 +792,16 @@ service glgps /system/bin/glgps -c /system/etc/gps_brcm_conf.xml
     user root
     group system
 
+service immvibed /system/bin/immvibed
+    class main
+    user shell
+    group system
+    oneshot
+
 on property:dev.bootcomplete=1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactiveX"
     write /sys/devices/platform/i2c_omap.2/i2c-2/2-001a/blink_enable 0
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "ondemand"
-    write /sys/devices/system/cpu/cpu0/cpufreq/turn_on_lg_dvfs 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/turn_on_lg_dvfs 0
 
 service dhcpcd_wlan0 /system/bin/dhcpcd -BKAL
     class main
