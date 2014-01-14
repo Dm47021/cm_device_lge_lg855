@@ -74,6 +74,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 
 
 # Mass Storage for ICS
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/lge/sniper/UsbController.cpp
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/file
 
 # Wireless
