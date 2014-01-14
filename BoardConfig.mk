@@ -9,7 +9,7 @@ COMMON_GLOBAL_CFLAGS += -DBINDER_COMPAT
 
 # Platform
 TARGET_BOARD_PLATFORM := omap3
-TARGET_BOOTLOADER_BOARD_NAME := sniper
+TARGET_BOOTLOADER_BOARD_NAME := LG855
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -34,7 +34,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/lge/sniper/include
 # BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/lge/sniper/vibrator/tspdrv.c
 
 # Egl
-BOARD_EGL_CFG := device/lge/sniper/prebuilt/etc/egl.cfg
+BOARD_EGL_CFG := device/lge/sniper/prebuilt/lib/egl/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DSURFACEFLINGER_FORCE_SCREEN_RELEASE
 USE_OPENGL_RENDERER := true
 
