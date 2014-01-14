@@ -34,12 +34,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_SPECIFIC_HEADER_PATH := device/lge/sniper/include
 
-# Vibrator
-# XXX: i9003 vibrator implementation doesn't work right.  Need to fix.
-#      (I suspect that the Sniper board is lacking some hardware that
-#      the i9003 has, which is why the vendor uses immvibed).
-# BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/lge/sniper/vibrator/tspdrv.c
-
 # Egl
 BOARD_EGL_CFG := device/lge/sniper/prebuilt/lib/egl/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DSURFACEFLINGER_FORCE_SCREEN_RELEASE
@@ -68,9 +62,6 @@ BUILD_PV_VIDEO_ENCODERS := 1
 BOARD_USE_LEGACY_TOUCHSCREEN := true
 
 BOARD_CDMA_NETWORK := true
-
-# http://www.slideshare.net/jserv/design-and-concepts-of-android-graphics
-# COMMON_GLOBAL_CFLAGS += -DMISSING_GRALLOC_BUFFERS -DREFRESH_RATE=60
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_CUSTOM_GRAPHICS := ../../../device/lge/sniper/recovery/graphics.c 
@@ -104,6 +95,9 @@ WPA_SUPPLICANT_VERSION		:= VER_0_6_X
 WIFI_DRIVER_HAS_LGE_SOFTAP	:= true
 BOARD_WEXT_NO_COMBO_SCAN	:= true
 BOARD_WPA_SUPPLICANT_DRIVER	:= WEXT
+
+# NEW Vibrator implementation, by DM47021
+BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/lge/sniper/vibrator.c
 
 # XXX: fix these
 TARGET_USERIMAGES_USE_EXT4 := true
