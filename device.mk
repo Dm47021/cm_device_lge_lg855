@@ -28,10 +28,10 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml
 
 PRODUCT_COPY_FILES += \
-	device/lge/sniper/init.rc:root/init.rc \
-	device/lge/sniper/ueventd.rc:root/ueventd.rc \
-	device/lge/sniper/ueventd.lgesniperboard.rc:root/ueventd.lgesniperboard.rc \
-	device/lge/sniper/init.ls855.usb.rc:root/init.ls855.usb.rc
+	device/lge/sniper/root/init.rc:root/init.rc \
+	device/lge/sniper/root/ueventd.rc:root/ueventd.rc \
+	device/lge/sniper/root/ueventd.lgesniperboard.rc:root/ueventd.lgesniperboard.rc \
+	device/lge/sniper/root/init.ls855.usb.rc:root/init.ls855.usb.rc
 
 # configs
 PRODUCT_COPY_FILES += \
