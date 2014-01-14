@@ -170,9 +170,6 @@
 	If false, Content-disposition fragments are ignored -->
     <bool name="config_mms_content_disposition_support">false</bool>
 
-    <!-- Component name of the service providing network location support. -->
-    <string name="config_networkLocationProvider">com.google.android.location.NetworkLocationProvider</string>
-
     <bool name="config_bluetooth_adapter_quick_switch">false</bool>
     <bool name="config_forceDisableHardwareKeyboard">true</bool>
 
