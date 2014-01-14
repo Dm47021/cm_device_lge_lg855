@@ -45,8 +45,20 @@ BOARD_EGL_CFG := device/lge/sniper/prebuilt/lib/egl/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DSURFACEFLINGER_FORCE_SCREEN_RELEASE
 USE_OPENGL_RENDERER := true
 
-# OMX Stuff
+# ti OMX Configuration
 HARDWARE_OMX := true
+ifdef HARDWARE_OMX
+OMX_JPEG := true
+OMX_VENDOR := ti
+OMX_VENDOR_INCLUDES := \
+   hardware/ti/omx/system/src/openmax_il/omx_core/inc \
+   hardware/ti/omx/image/src/openmax_il/jpeg_enc/inc
+OMX_VENDOR_WRAPPER := TI_OMX_Wrapper
+BOARD_OPENCORE_LIBRARIES := libOMX_Core
+BOARD_OPENCORE_FLAGS := -DHARDWARE_OMX=1
+endif
+
+# Stagefright
 TARGET_USE_OMAP_COMPAT := true
 BUILD_WITH_TI_AUDIO := 1
 BUILD_PV_VIDEO_ENCODERS := 1
@@ -54,14 +66,6 @@ BUILD_PV_VIDEO_ENCODERS := 1
 # Touch screen compatibility for ICS
 # XXX: off in FreeOptimusProject p970 config
 BOARD_USE_LEGACY_TOUCHSCREEN := true
-
-# FOP audio config
-BOARD_USES_GENERIC_AUDIO := false
-BOARD_USES_ALSA_AUDIO := true
-BUILD_WITH_ALSA_UTILS := true
-BOARD_USES_TI_OMAP_MODEM_AUDIO := true
-BOARD_USES_AUDIO_LEGACY := true
-TARGET_PROVIDES_LIBAUDIO := true
 
 BOARD_CDMA_NETWORK := true
 
@@ -71,7 +75,15 @@ BOARD_CDMA_NETWORK := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_CUSTOM_GRAPHICS := ../../../device/lge/sniper/recovery/graphics.c 
 
-# Audio & Bluetooth
+# Audio
+BOARD_USES_GENERIC_AUDIO := false
+BOARD_USES_ALSA_AUDIO := true
+BUILD_WITH_ALSA_UTILS := true
+BOARD_USES_TI_OMAP_MODEM_AUDIO := true
+BOARD_USES_AUDIO_LEGACY := true
+TARGET_PROVIDES_LIBAUDIO := true
+
+# Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
