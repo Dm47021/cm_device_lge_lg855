@@ -33,3 +33,6 @@
 
 # video encoder on 720p-enabled 8k targets
 /dev/pmem_venc          0660    system     audio
+
+# NEW VIBRATOR
+/dev/tspdrv             0666    system     system
