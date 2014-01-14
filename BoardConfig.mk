@@ -70,6 +70,7 @@ BOARD_CUSTOM_GRAPHICS := ../../../device/lge/sniper/recovery/graphics.c
 
 # Audio & Bluetooth
 BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_BCM := true
 
 
 # Mass Storage for ICS
