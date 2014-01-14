@@ -83,6 +83,9 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_CUSTOM_USB_CONTROLLER := ../../device/lge/sniper/UsbController.cpp
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/file
 
+# Sensors 
+BOARD_USES_GENERIC_INVENSENSE := true 
+
 # Wireless
 # XXX?
 BOARD_WLAN_DEVICE		:= bcm4329
