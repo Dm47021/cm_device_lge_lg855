@@ -9,7 +9,8 @@ COMMON_GLOBAL_CFLAGS += -DBINDER_COMPAT
 
 # Platform
 TARGET_BOARD_PLATFORM := omap3
-TARGET_BOOTLOADER_BOARD_NAME := LG855
+# This is the Boost Mobile variant
+TARGET_BOOTLOADER_BOARD_NAME := lg855
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -132,4 +133,4 @@ BOARD_GLOBAL_CFLAGS += -DCHARGERMODE_CMDLINE_NAME='"rs"' -DCHARGERMODE_CMDLINE_V
 
 # On LS855/LG855/VM855 PlayfulGod's recovery identifies as "marquee"
 # On AS855 PlayfulGod's recovery identifies as "ignite"
-TARGET_OTA_ASSERT_DEVICE := sniper,marquee,ignite
+TARGET_OTA_ASSERT_DEVICE := sniper,marquee,ignite,lg855,ls855

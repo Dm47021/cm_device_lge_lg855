@@ -1,1 +1,4 @@
+add_lunch_combo cm_ls855-eng
+add_lunch_combo cm_ls855-userdebug
 add_lunch_combo cm_sniper-userdebug
+

@@ -29,9 +29,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	device/lge/sniper/root/init.rc:root/init.rc \
+        device/lge/sniper/root/fstab.lg855:root/fstab.lg855 \
 	device/lge/sniper/root/ueventd.rc:root/ueventd.rc \
-	device/lge/sniper/root/ueventd.lgesniperboard.rc:root/ueventd.lgesniperboard.rc \
-	device/lge/sniper/root/init.ls855.usb.rc:root/init.ls855.usb.rc
+	device/lge/sniper/root/ueventd.lg855.rc:root/ueventd.lg855.rc \
+	device/lge/sniper/root/init.lg855.usb.rc:root/init.lg855.usb.rc
 
 # configs
 PRODUCT_COPY_FILES += \
