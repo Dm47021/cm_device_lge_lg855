@@ -28,7 +28,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml
 
 PRODUCT_COPY_FILES += \
-	device/lge/lg855/root/init.rc:root/init.rc \
+	device/lge/lg855/root/init.lg855.rc:root/init.lg855.rc \
         device/lge/lg855/root/fstab.lg855:root/fstab.lg855 \
 	device/lge/lg855/root/ueventd.rc:root/ueventd.rc \
 	device/lge/lg855/root/ueventd.lg855.rc:root/ueventd.lg855.rc \
