@@ -15,7 +15,7 @@
 # limitations under the License.
 
 VENDOR=lge
-DEVICE=sniper
+DEVICE=lg855
 
 rm -rf ../../../vendor/$VENDOR/$DEVICE
 mkdir -p ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
