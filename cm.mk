@@ -6,11 +6,11 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 $(call inherit-product, vendor/cm/config/cdma.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/lge/sniper/full_sniper.mk)
+$(call inherit-product, device/lge/lg855/full_lg855.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := sniper
-PRODUCT_NAME := cm_sniper
+PRODUCT_DEVICE := lg855
+PRODUCT_NAME := cm_lg855
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := LG-SNIPER
 PROUDCT_MANUFACTURER := LGE
