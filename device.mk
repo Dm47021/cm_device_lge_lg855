@@ -29,6 +29,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
         device/lge/lg855/root/fstab.lg855:root/fstab.lg855 \
+        device/lge/lg855/root/init.lg855.rc:root/init.lg855.rc \
 	device/lge/lg855/root/ueventd.rc:root/ueventd.rc \
 	device/lge/lg855/root/ueventd.lg855.rc:root/ueventd.lg855.rc \
 	device/lge/lg855/root/init.lg855.usb.rc:root/init.lg855.usb.rc
