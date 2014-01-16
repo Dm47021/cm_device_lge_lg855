@@ -1,4 +1,4 @@
-include vendor/lge/sniper/BoardConfigVendor.mk
+include vendor/lge/lg855/BoardConfigVendor.mk
 
 # Camera
 USE_CAMERA_STUB := false
@@ -31,10 +31,10 @@ TARGET_NO_RADIOIMAGE := true
 
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_SPECIFIC_HEADER_PATH := device/lge/sniper/include
+TARGET_SPECIFIC_HEADER_PATH := device/lge/lg855/include
 
 # Egl
-BOARD_EGL_CFG := device/lge/sniper/prebuilt/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/lge/lg855/prebuilt/lib/egl/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DSURFACEFLINGER_FORCE_SCREEN_RELEASE
 USE_OPENGL_RENDERER := true
 
@@ -63,7 +63,7 @@ BOARD_USE_LEGACY_TOUCHSCREEN := true
 BOARD_CDMA_NETWORK := true
 
 BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_CUSTOM_GRAPHICS := ../../../device/lge/sniper/recovery/graphics.c 
+BOARD_CUSTOM_GRAPHICS := ../../../device/lge/lg855/recovery/graphics.c 
 
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
@@ -79,7 +79,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 
 
 # Mass Storage for ICS
-BOARD_CUSTOM_USB_CONTROLLER := ../../device/lge/sniper/UsbController.cpp
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/lge/lg855/UsbController.cpp
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/file
 
 # Sensors 
@@ -99,7 +99,7 @@ BOARD_WEXT_NO_COMBO_SCAN	:= true
 BOARD_WPA_SUPPLICANT_DRIVER	:= WEXT
 
 # NEW Vibrator implementation, by DM47021
-BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/lge/sniper/vibrator.c
+BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/lge/lg855/vibrator.c
 
 # XXX: fix these
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -109,8 +109,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 # Kernel
 #TARGET_KERNEL_SOURCE := kernel/lge/hyperics
 #TARGET_KERNEL_CONFIG := sniper_defconfig
-TARGET_PREBUILT_KERNEL := device/lge/sniper/kernels/hicstdm/kernel
-TARGET_PREBUILT_MODULES := $(wildcard device/lge/sniper/kernels/hicstdm/*.ko)
+TARGET_PREBUILT_KERNEL := device/lge/lg855/kernels/hicstdm/kernel
+TARGET_PREBUILT_MODULES := $(wildcard device/lge/lg855/kernels/hicstdm/*.ko)
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
