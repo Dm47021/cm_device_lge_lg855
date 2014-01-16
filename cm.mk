@@ -11,7 +11,7 @@ $(call inherit-product, device/lge/lg855/full_sniper.mk)
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := lg855
 PRODUCT_NAME := cm_lg855
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := LG-SNIPER
+PRODUCT_BRAND := LGE
+PRODUCT_MODEL := LG-Marquee
 PROUDCT_MANUFACTURER := LGE
 PRODUCT_CHARACTERISTICS := phone

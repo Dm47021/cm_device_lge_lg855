@@ -4,14 +4,14 @@ $(call inherit-product, build/target/product/full.mk)
 $(call inherit-product, build/target/product/languages_small.mk)
 $(call inherit-product, vendor/cm/config/common.mk)
 
-$(call inherit-product-if-exists, vendor/lge/sniper/sniper-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/lge855/lg855-vendor.mk)
 
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi 
 
 PRODUCT_LOCALES := en_US es_ES
 
-DEVICE_PACKAGE_OVERLAYS += device/lge/sniper/overlay
+DEVICE_PACKAGE_OVERLAYS += device/lge/lg855/overlay
 
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -28,17 +28,16 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml
 
 PRODUCT_COPY_FILES += \
-	device/lge/sniper/root/init.rc:root/init.rc \
-        device/lge/sniper/root/fstab.lg855:root/fstab.lg855 \
-	device/lge/sniper/root/ueventd.rc:root/ueventd.rc \
-	device/lge/sniper/root/ueventd.lg855.rc:root/ueventd.lg855.rc \
-	device/lge/sniper/root/init.lg855.usb.rc:root/init.lg855.usb.rc
+        device/lge/lg855/root/fstab.lg855:root/fstab.lg855 \
+	device/lge/lg855/root/ueventd.rc:root/ueventd.rc \
+	device/lge/lg855/root/ueventd.lg855.rc:root/ueventd.lg855.rc \
+	device/lge/lg855/root/init.lg855.usb.rc:root/init.lg855.usb.rc
 
 # configs
 PRODUCT_COPY_FILES += \
-	device/lge/sniper/configs/AudioFilter.csv:system/etc/AudioFilter.csv \
-	device/lge/sniper/configs/media_profiles.xml:system/etc/media_profiles.xml \
-	device/lge/sniper/configs/adreno_config.txt:system/etc/adreno_config.txt
+	device/lge/lg855/configs/AudioFilter.csv:system/etc/AudioFilter.csv \
+	device/lge/lg855/configs/media_profiles.xml:system/etc/media_profiles.xml \
+	device/lge/lg855/configs/adreno_config.txt:system/etc/adreno_config.txt
 
 # Offmode charging?
 # PRODUCT_PACKAGES += charger
@@ -46,30 +45,30 @@ PRODUCT_COPY_FILES += \
 
 # FOP alsa config
 PRODUCT_COPY_FILES += \
-	device/lge/sniper/configs/asound.conf:system/etc/asound.conf \
-	device/lge/sniper/audio/alsa/alsa.conf:system/usr/share/alsa/alsa.conf \
-	device/lge/sniper/audio/alsa/cards/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
-	device/lge/sniper/audio/alsa/init/00main:system/usr/share/alsa/init/00main \
-	device/lge/sniper/audio/alsa/init/default:system/usr/share/alsa/init/default \
-	device/lge/sniper/audio/alsa/init/hda:system/usr/share/alsa/init/hda \
-	device/lge/sniper/audio/alsa/init/help:system/usr/share/alsa/init/help \
-	device/lge/sniper/audio/alsa/init/info:system/usr/share/alsa/init/info \
-	device/lge/sniper/audio/alsa/init/test:system/usr/share/alsa/init/test \
-	device/lge/sniper/audio/alsa/pcm/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
-	device/lge/sniper/audio/alsa/pcm/default.conf:system/usr/share/alsa/pcm/default.conf \
-	device/lge/sniper/audio/alsa/pcm/dmix.conf:system/usr/share/alsa/pcm/dmix.conf \
-	device/lge/sniper/audio/alsa/pcm/dpl.conf:system/usr/share/alsa/pcm/dpl.conf \
-	device/lge/sniper/audio/alsa/pcm/dsnoop.conf:system/usr/share/alsa/pcm/dsnoop.conf \
-	device/lge/sniper/audio/alsa/pcm/front.conf:system/usr/share/alsa/pcm/front.conf \
-	device/lge/sniper/audio/alsa/pcm/iec958.conf:system/usr/share/alsa/pcm/iec958.conf \
-	device/lge/sniper/audio/alsa/pcm/modem.conf:system/usr/share/alsa/pcm/modem.conf \
-	device/lge/sniper/audio/alsa/pcm/rear.conf:system/usr/share/alsa/pcm/rear.conf \
-	device/lge/sniper/audio/alsa/pcm/side.conf:system/usr/share/alsa/pcm/side.conf \
-	device/lge/sniper/audio/alsa/pcm/surround40.conf:system/usr/share/alsa/pcm/surround40.conf \
-	device/lge/sniper/audio/alsa/pcm/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
-	device/lge/sniper/audio/alsa/pcm/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
-	device/lge/sniper/audio/alsa/pcm/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
-	device/lge/sniper/audio/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf
+	device/lge/lg855/configs/asound.conf:system/etc/asound.conf \
+	device/lge/lg855/audio/alsa/alsa.conf:system/usr/share/alsa/alsa.conf \
+	device/lge/lg855/audio/alsa/cards/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
+	device/lge/lg855/audio/alsa/init/00main:system/usr/share/alsa/init/00main \
+	device/lge/lg855/audio/alsa/init/default:system/usr/share/alsa/init/default \
+	device/lge/lg855/audio/alsa/init/hda:system/usr/share/alsa/init/hda \
+	device/lge/lg855/audio/alsa/init/help:system/usr/share/alsa/init/help \
+	device/lge/lg855/audio/alsa/init/info:system/usr/share/alsa/init/info \
+	device/lge/lg855/audio/alsa/init/test:system/usr/share/alsa/init/test \
+	device/lge/lg855/audio/alsa/pcm/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
+	device/lge/lg855/audio/alsa/pcm/default.conf:system/usr/share/alsa/pcm/default.conf \
+	device/lge/lg855/audio/alsa/pcm/dmix.conf:system/usr/share/alsa/pcm/dmix.conf \
+	device/lge/lg855/audio/alsa/pcm/dpl.conf:system/usr/share/alsa/pcm/dpl.conf \
+	device/lge/lg855/audio/alsa/pcm/dsnoop.conf:system/usr/share/alsa/pcm/dsnoop.conf \
+	device/lge/lg855/audio/alsa/pcm/front.conf:system/usr/share/alsa/pcm/front.conf \
+	device/lge/lg855/audio/alsa/pcm/iec958.conf:system/usr/share/alsa/pcm/iec958.conf \
+	device/lge/lg855/audio/alsa/pcm/modem.conf:system/usr/share/alsa/pcm/modem.conf \
+	device/lge/lg855/audio/alsa/pcm/rear.conf:system/usr/share/alsa/pcm/rear.conf \
+	device/lge/lg855/audio/alsa/pcm/side.conf:system/usr/share/alsa/pcm/side.conf \
+	device/lge/lg855/audio/alsa/pcm/surround40.conf:system/usr/share/alsa/pcm/surround40.conf \
+	device/lge/lg855/audio/alsa/pcm/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
+	device/lge/lg855/audio/alsa/pcm/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
+	device/lge/lg855/audio/alsa/pcm/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
+	device/lge/lg855/audio/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf
 
 #PRODUCT_PACKAGES += getbaseband
 
@@ -83,22 +82,22 @@ PRODUCT_PACKAGES += \
 	audio.primary.omap3
 
 # HWComposer
-PRODUCT_PACKAGES += hwcomposer.default
+PRODUCT_PACKAGES += hwcomposer.omap3
 
 # Camera
-PRODUCT_PACKAGES += camera.sniper
+PRODUCT_PACKAGES += camera.omap3
 
 # OMX stuff
 PRODUCT_PACKAGES += dspexec libOMX_Core
 
 # Misc
 PRODUCT_PACKAGES += \
-	lights.sniper \
+	lights.omap3 \
 	com.android.future.usb.accessory \
 	Apollo
 
 PRODUCT_PACKAGES += \
-	sniper_keypad.kcm.bin
+	lg855_keypad.kcm.bin
 
 PRODUCT_PACKAGES += \
 	Provision \

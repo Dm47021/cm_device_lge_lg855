@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),sniper)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),lg855)
 
 LOCAL_PATH := $(call my-dir)
 
