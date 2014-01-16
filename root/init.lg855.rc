@@ -383,8 +383,8 @@ on boot
     chmod 0664 /sys/devices/platform/motion_sensor/gyro_onoff
     chmod 0664 /sys/devices/platform/motion_sensor/gyro_delay
 # [[ LGE_UBIQUIX_MODIFIED_START : shyun@ubiquix.com [2011.09.19] - Proximity sensor sysfs file path is modified.
-    chmod 0664 /sys/bus/i2c/drivers/black_proxi/3-0044/onoff
-    chmod 0664 /sys/bus/i2c/drivers/black_proxi/3-0044/delay
+    chmod 0664 /sys/bus/i2c/drivers/hub_proxi/3-0044/onoff
+    chmod 0664 /sys/bus/i2c/drivers/hub_proxi/3-0044/delay
 # ]] LGE_UBIQUIX_MODIFIED_END : shyun@ubiquix.com [2011.09.19]- Proximity sensor sysfs file path is modified.
     chmod 0664 /sys/devices/platform/motion_sensor/shake_onoff
     chmod 0664 /sys/bus/i2c/drivers/kxtf9/3-000f/shake_onoff
